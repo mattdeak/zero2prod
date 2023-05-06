@@ -17,3 +17,15 @@ impl Display for PostgresUrl {
         )
     }
 }
+
+impl PostgresUrl {
+    pub fn from_env() -> Result<PostgresUrl, Box<dyn std::error::Error>> {
+        Ok(PostgresUrl {
+            host: std::env::var("POSTGRES_HOST")?,
+            port: std::env::var("POSTGRES_PORT")?.parse::<u16>()?,
+            username: std::env::var("POSTGRES_USER")?,
+            password: std::env::var("POSTGRES_PASSWORD")?,
+            database: std::env::var("POSTGRES_DB")?,
+        })
+    }
+}

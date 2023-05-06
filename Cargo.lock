@@ -2694,9 +2694,11 @@ dependencies = [
  "derive_builder",
  "dotenvy",
  "hyper",
+ "log",
  "reqwest",
  "sea-orm",
  "serde",
  "tokio",
+ "tower",
  "uuid",
 ]
