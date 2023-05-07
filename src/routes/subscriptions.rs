@@ -9,7 +9,6 @@ use sea_orm::ActiveValue::Set;
 use sea_orm::DatabaseConnection;
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
-use tracing::{debug, info};
 use uuid::Uuid;
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -22,8 +21,6 @@ pub async fn subscribe(
     State(db): State<Arc<DatabaseConnection>>,
     Form(subscription): Form<Subscription>,
 ) -> StatusCode {
-    info!("Subscribing {:?}", subscription);
-
     let subscription = SubscriptionActiveModel {
         id: Set(Uuid::new_v4()),
         name: Set(subscription.name),

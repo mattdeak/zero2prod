@@ -1,10 +1,6 @@
 use reqwest;
-use std::net::TcpListener;
 use tokio;
-use zero2prod;
 mod utils;
-
-const TEST_ADDRESS: &'static str = "127.0.0.1:0";
 
 #[tokio::test]
 async fn health_check_works() {

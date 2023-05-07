@@ -2013,6 +2013,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "sqlx-sqlite"
+version = "0.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6c585b9933cedb33f8b155d8ee89ec98e0eb322080237d9992fc7a8d3ed61391"
+
+[[package]]
 name = "stringprep"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2790,6 +2796,7 @@ dependencies = [
  "reqwest",
  "sea-orm",
  "serde",
+ "sqlx-sqlite",
  "tokio",
  "tower",
  "tower-http",
