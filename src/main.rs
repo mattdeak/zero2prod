@@ -1,6 +1,4 @@
-use axum;
 use dotenvy::dotenv;
-use tokio;
 use tracing::Level;
 use zero2prod::make_router;
 use zero2prod::types::PostgresUrl;
